@@ -1,0 +1,65 @@
+
+#Insertion Sort Projesi
+
+[22,27,16,2,18,6] -> Insertion Sort
+
+1-) Yukarı verilen dizinin sort türüne göre aşamalarını yazınız.
+
+  1.Adım
+  Birinci eleman en küçük eleman mı kontrol edilir.En küçük ise dokunmadan sıradaki elemana geçilir. Değilse en küçük eleman bulunur ve birinci ile yer değiştirilir.
+
+  [22,27,16,2,18,6]
+
+  En küçük eleman 2 olduğundan birinci eleman ile ikinci eleman yer değiştirilir.
+
+  [2,27,16,22,18,6]
+
+  2.Adım
+  İkinci eleman en küçük eleman mı kontrol edilir.En küçük ise dokunmadan sıradaki elemana geçilir. Değilse en küçük eleman bulunur ve ikinci ile yer değiştirilir.
+  En küçük eleman 6 olduğundan, ikinci eleman ile yer değiştirilir.
+
+  [2,6,16,22,18,27]
+  
+  3.Adım
+  Birinci ve ikinci adımdaki işlemler sıradaki eleman için uygulanır.
+
+  [2,6,16,22,18,27]
+
+  16 En küçük eleman olduğundan dokunmadan devam edilir.
+
+  [2,6,16,22,18,27]
+
+  18 en küçük eleman olduğundan dördüncü eleman ile yer değiştirir.
+
+  [2,6,16,18,22,27]
+
+  Son durum sıralamaya uygun olduğundan algoritma son bulur.
+
+2-) Big-O gösterimini yazınız.
+
+  Big-O gösterimlerinde worst case analiz edilir. Worst case analizinde ise input(girdi) n kabul edilerek gösterilir. Birinci adımda n adet işlem yapıldığını varsayarsak, ikinci adımda birinci adımda bir elemanı yerleştirdiğimizden dolayı birinci adıma göre bir eksik işlem (n-1) yapmış oluyoruz.
+  Her iterasyonda bir önceki adıma göre bir eksik işlem yaptığımızdan dolayı genel notasyon n + (n-1) + (n-2) +....+ 1 olana kadar devam eder. 
+  n'den 1'e kadar olan işlem toplamı n.(n+1)/2 olduğundan (n^2+n)/2 olur. Derecesi en yüksek olan değişken, fonksiyonu etkileyecek en büyük eleman olduğundan worst case Big-O O(n^2) olacaktır.
+  
+ 3-) Time Complexity: Average case: Aradığımız sayının ortada olması,Worst case: Aradığımız sayının sonda olması, Best case: Aradığımız sayının dizinin en başında olması.
+  Best Case : Dizinin halihazırda küçükten büyüğe sıralı olması durumudur. Böyle bir durumda yapılacak tek işlem sıralı çubuğunu sağa kaydırmak. Dolayısıyla karmaşıklık lineerdir. O(n)
+  Worst Case : Dizinin Büyükten küçüğe sıralı verilmesi. O(n^2)
+  Average Case : Best case ile worst case'in ortalamasıdır. = (n+n^2)/2 = (n.(n+1))/2 = O(n^2)
+  
+ 4-) Dizi sıralandıktan sonra 18 sayısı hangi case kapsamına girer? Yazınız.
+ Dizi sıralandıktan sonra 18 Averasge kapsamına girer. 
+ 
+ 
+ 5-) [7,3,5,8,2,9,4,15,6] dizisinin Insertion Sort'a göre ilk 4 adımını yazınız.
+ 
+ 1.ADIM = [2,3,5,8,7,9,4,15,6]
+ 2.ADIM = [2,3,5,8,7,9,4,15,6] 
+ 3.ADIM = [2,3,4,8,7,9,5,15,6] 
+ 4.ADIM = [2,3,4,5,7,9,8,15,6] 
+ Devamı ise;
+ 5.ADIM = [2,3,4,5,6,9,8,15,7]
+ 6.ADIM = [2,3,4,5,6,7,8,15,9]
+ 7.ADIM = [2,3,4,5,6,7,8,9,15]
+
+ 
+
